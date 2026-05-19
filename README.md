@@ -31,7 +31,7 @@ Aplicativo mobile de currículo desenvolvido com React Native e Expo, consumindo
 git clone https://github.com/renanldev/curriculo-react-native.git
 
 # Entre na pasta
-cd atv-react-native
+cd meu-app
 
 # Instale as dependências
 npm install
