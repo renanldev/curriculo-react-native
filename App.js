@@ -70,6 +70,15 @@ export default function App() {
           </TouchableOpacity>
         </View>
       </View>
+      
+      
+      <View style={styles.sobreMim}>
+        <Text style={styles.titulo}>Sobre Mim</Text>
+
+        <View style={styles.bio}>
+          <Text style={styles.bio}>Estudante de tecnologia no 3º período, com experiência prática em desenvolvimento front-end adquirida ao longo dos projetos da faculdade. 
+            Busco oportunidades de estágio onde possa contribuir e continuar crescendo na área.</Text>
+        </View>
 
       <View style={styles.formacoes}>
         <Text style={styles.titulo}>Formação Acadêmica</Text>
@@ -82,7 +91,7 @@ export default function App() {
 
         <View style={styles.dg}>
           <Text style={styles.curso}>Graduação em Design Gráfico</Text>
-          <Text style={styles.faculdade}>UNASP - Centro Universitário Adventista de São Paulo</Text>
+          <Text style={styles.faculdade}>UNASP</Text>
           <Text style={styles.data}>2022-2024</Text>
         </View>
       </View>
@@ -104,14 +113,17 @@ export default function App() {
       </View>
 
       <View style={styles.projetos}>
-        <Text style={styles.titulo}>Projetos</Text>
+        <Text style={styles.titulo}>Meus Projetos Recentes</Text>
+        <Text style={styles.subtitulo}>Repositórios Públicos no GitHub</Text>
         {repos.map((repo, index) => (
           <Text key={index}>{repo.name}</Text>
         ))}
       </View>
     </View>
+    </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -151,13 +163,19 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
 
+  sobreMim: {
+    width: "90%",
+  
+  },
+
   formacoes: {
     width: "90%",
+    marginTop: 10,
   },
 
   cursos: {
     width: "90%",
-    marginTop: 15,
+    marginTop: 10,
   },
 
   titulo: {
@@ -169,6 +187,10 @@ const styles = StyleSheet.create({
   curso: {
     fontSize: 14,
    
+  },
+
+   bio: {
+    marginTop: 2,
   },
 
   ads: {
@@ -200,7 +222,12 @@ const styles = StyleSheet.create({
 
   projetos: {
     width: "90%",
-    marginTop: 20,
+    marginTop: 10,
   },
+
+  subtitulo: {
+    color: "#999",
+    marginBottom: 3,
+  }
 
 });
